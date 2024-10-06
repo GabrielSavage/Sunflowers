@@ -1,0 +1,91 @@
+/* Ensure the html and body take up 100% height of the screen */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Add background image to the body */
+body {
+    background-image: url('./images/background.png'); /* Path to background image */
+    background-size: cover; /* Ensure the image covers the entire screen */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Keep the background fixed when scrolling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Div 1, 2, 3 in the top left corner */
+.red, .green, .blue {
+    width: 100px;
+    height: 100px;
+    color: white; /* Set text color to white */
+    font-family: "Edu AU VIC WA NT Guides", cursive;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the text inside the div */
+    border-bottom-left-radius: 20%;
+}
+
+.red {
+    background-color: rgb(156, 70, 156);
+    top: 20px;
+    left: 20px;
+}
+
+.green {
+    background-color: rgb(86, 114, 86);
+    top: 140px;
+    left: 60px;
+}
+
+.blue {
+    background-color: blue;
+    top: 260px;
+    left: 100px;
+}
+
+/* Center of the sunflower */
+.center {
+    width: 120px;
+    height: 120px;
+    background-color: gold;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Edu AU VIC WA NT Guides", cursive;
+    color: white; /* Set text color to white */
+    font-weight: 700;
+}
+
+/* Petals of the sunflower */
+.petal {
+    width: 20px;  /* Thinner petals */
+    height: 200px; /* Longer petals */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% -100px; /* Adjust transform origin to place petals around the circle */
+    transform: rotate(var(--rotation)) translate(120px) translateX(-50%) translateY(-50%);
+}
+
+/* Position h2 in the bottom-right corner */
+.bottom-right {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: white; /* Set text color to white */
+    font-family: "Edu AU VIC WA NT Guides", cursive;
+    font-size: 2rem; /* Adjust the font size as needed */
+    font-weight: bold;
+}
